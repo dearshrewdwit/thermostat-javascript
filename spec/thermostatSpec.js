@@ -5,8 +5,13 @@ describe("thermostat logic", function() {
     thermostat = new Thermostat();
   });
 
-  it("has a starting temperature of 20", function(){
+  it("has a default temperature of 20", function(){
     expect(thermostat.getTemp()).toEqual(20);
+  });
+
+  it("can be set with a temp", function() {
+    thermostat2 = new Thermostat(24);
+    expect(thermostat2.getTemp()).toEqual(24);
   });
 
   it("we can make it HOT", function() {

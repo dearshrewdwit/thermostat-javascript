@@ -1,5 +1,5 @@
-function Thermostat() {
-  this.temp = 20;
+function Thermostat(temp) {
+  this.temp = typeof temp === "undefined" ? 20 : temp;
   this.minTemp = 10;
   this.maxTemp = 25;
   this.mode = true;

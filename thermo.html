@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Ed's Thermostat</title>
+  <link rel="stylesheet" href="css/application.css">
+  <script src="src/thermostat.js"></script>
+  <script src="app.js"></script>
+</head>
+
+<body>
+  <p id="display"></p>
+  <button id="upTemp" class="thermoButton" onclick="thermoUp();"> + temp</button>
+  <button id="downTemp" class="thermoButton" onclick="thermoDown();"> - temp</button>
+  <button id="reset" class="thermoButton" onclick="reset();">reset</button>
+  <form>
+    power save mode<input type="checkbox" checked id="psm" onclick="powerSaveMode();">
+  </form>
+</body>
+
+</html>
