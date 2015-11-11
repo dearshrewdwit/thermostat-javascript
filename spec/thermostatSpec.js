@@ -47,4 +47,32 @@ describe("thermostat logic", function() {
     thermostat.powerSaveMode();
     expect(thermostat.maxTemp).toEqual(25);
   });
+
+  it("resets to 20 degrees", function() {
+    thermostat.upTemp();
+    thermostat.resetTemp();
+    expect(thermostat.getTemp()).toEqual(20);
+  });
+
+  it("returns green if < 18", function(){
+    thermostat.temp = 15;
+    expect(thermostat.getColour()).toEqual('green');
+  });
+
+  it("returns red if > 25", function(){
+    thermostat.powerSaveMode();
+    thermostat.temp = 30;
+    expect(thermostat.getColour()).toEqual('red');
+  });
+
+  it("returns yellow if 18 >= temp > 24", function(){
+    expect(thermostat.getColour()).toEqual('yellow');
+  });
+
+
+
+
+
+
+
 });
